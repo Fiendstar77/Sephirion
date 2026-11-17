@@ -1,0 +1,17 @@
+# Compiled Common Lisp artifacts
+*.fasl
+*.fas
+*.fsl
+*.dxl
+
+# Editor and desktop metadata
+*~
+.#*
+\#*\#
+.directory
+.DS_Store
+
+# Local secrets
+.env
+.env.*
+!.env.example
