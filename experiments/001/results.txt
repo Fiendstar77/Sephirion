@@ -1,0 +1,101 @@
+SEPHIRION-001 / Experiment 001
+Exact rational synchronous realm network
+
+OBSERVATIONS (states in sorted realm-ID order)
+PASS A / affine propagation: b(1)=0+(2*3+1)=7
+  observed: ((3 0) (3 7))
+  expected: ((3 0) (3 7))
+PASS B / recurrent interaction: a,b,c
+  observed: ((1 0 0) (1 2 0) (1 4 6) (4 6 18) (13 14 36))
+  expected: ((1 0 0) (1 2 0) (1 4 6) (4 6 18) (13 14 36))
+PASS C / inner,input,shell: explicit boundary adds one tick per edge
+  observed: ((0 1 0) (0 1 1) (1 1 2) (3 1 3))
+  expected: ((0 1 0) (0 1 1) (1 1 2) (3 1 3))
+PASS C / immediate children of shell
+  observed: ("inner")
+  expected: ("inner")
+PASS D / repeated runs have identical complete histories
+  observed: T
+  expected: T
+PASS E / disable bc: c stays zero; feedback to a disappears
+  observed: ((1 0 0) (1 2 0) (1 4 0) (1 6 0) (1 8 0))
+  expected: ((1 0 0) (1 2 0) (1 4 0) (1 6 0) (1 8 0))
+  rejection: Expected a nonempty string identifier, got "".
+PASS F / empty identifier
+  observed: :REJECTED
+  expected: :REJECTED
+  rejection: Expected a bounded exact rational, got 1.0d0.
+PASS F / float state
+  observed: :REJECTED
+  expected: :REJECTED
+  rejection: Expected a bounded exact rational, got #C(1 2).
+PASS F / complex signal
+  observed: :REJECTED
+  expected: :REJECTED
+  rejection: Expected a bounded exact rational, got "noise".
+PASS F / nonnumeric signal
+  observed: :REJECTED
+  expected: :REJECTED
+  rejection: Expected a bounded exact rational, got 115792089237316195423570985008687907853269984665640564039457584007913129639936.
+PASS F / oversized state
+  observed: :REJECTED
+  expected: :REJECTED
+  rejection: Unsupported path operator :RESONATE.
+PASS F / unsupported operator
+  observed: :REJECTED
+  expected: :REJECTED
+  rejection: Operator :IDENTITY does not support these coefficients.
+PASS F / unsupported coefficients
+  observed: :REJECTED
+  expected: :REJECTED
+  rejection: ENABLED must be T or NIL.
+PASS F / invalid enabled flag
+  observed: :REJECTED
+  expected: :REJECTED
+  rejection: Duplicate identifier "a".
+PASS F / duplicate realms
+  observed: :REJECTED
+  expected: :REJECTED
+  rejection: Duplicate identifier "p".
+PASS F / duplicate paths
+  observed: :REJECTED
+  expected: :REJECTED
+  rejection: Unknown realm "missing".
+PASS F / missing endpoint
+  observed: :REJECTED
+  expected: :REJECTED
+  rejection: Unknown realm "missing".
+PASS F / missing parent
+  observed: :REJECTED
+  expected: :REJECTED
+  rejection: Containment cycle at "a".
+PASS F / containment cycle
+  observed: :REJECTED
+  expected: :REJECTED
+  rejection: Path "bypass" bypasses a nesting boundary.
+PASS F / boundary bypass
+  observed: :REJECTED
+  expected: :REJECTED
+  rejection: Step count must be a nonnegative integer.
+PASS F / invalid step count
+  observed: :REJECTED
+  expected: :REJECTED
+  rejection: Execution order must be a permutation of all identifiers.
+PASS F / invalid execution order
+  observed: :REJECTED
+  expected: :REJECTED
+  rejection: Expected a bounded exact rational, got 115792089237316195423570985008687907853269984665640564039457584007913129639936.
+PASS F / transformed signal bound
+  observed: :REJECTED
+  expected: :REJECTED
+  rejection: Expected a bounded exact rational, got 115792089237316195423570985008687907853269984665640564039457584007913129639936.
+PASS F / next-state bound
+  observed: :REJECTED
+  expected: :REJECTED
+
+VALIDATION: passed=24 failed=0 unexecuted=0
+
+INTERPRETATION
+These observations agree with the specified exact recurrence and explicit boundary routing.
+Nesting establishes containment and routing constraints; no computational advantage is established.
+No resonance, fractalization, intelligence, consciousness, or physical acoustic behavior is demonstrated.
