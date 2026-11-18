@@ -40,11 +40,23 @@ See the [formal specification](docs/SEPHIRION_001_SPECIFICATION.md),
 [validation results](docs/SEPHIRION_001_RESULTS.md), and
 [Experiment 001 source and recorded output](experiments/001/README.md).
 
-The earlier pair of coupled, damped acoustic oscillators remains a separate
-baseline with its own [specification](docs/ACOUSTICS.md) and
-[measured report](reports/experiment-0001/README.md). It has not been connected to
-the realm network. Resonance within recursive realms and fractalization remain
-future research hypotheses. Spatial propagation is not implemented.
+**SEPHIRION-002 adds acoustic realms in a separate state model:** floating-point
+displacement/velocity, passive symmetric elastic couplings, explicit harmonic
+pressure drives, and global RK4 integration with input-work and dissipation
+accounting. Acoustic containment follows the existing boundary rules. The
+exact-rational accumulator is preserved and is not reinterpreted as acoustics.
+
+See the [acoustic-network specification](docs/SEPHIRION_002_SPECIFICATION.md),
+[results and limitations](docs/SEPHIRION_002_RESULTS.md), and
+[Experiment 002 measurements](experiments/002/README.md). The generalized model
+recovers the original pair and tests three-node flat/nested chains. With identical
+physical graphs and parameters, changing only containment labels produces the
+expected null result: no additional physical behavior.
+
+The original pair remains unchanged with its own [specification](docs/ACOUSTICS.md)
+and [report](reports/experiment-0001/README.md). Spatial propagation, physical
+calibration, fractalization, and any computational benefit of recursive organization
+remain unimplemented or unestablished.
 
 From the repository root, load the system with:
 
@@ -84,6 +96,33 @@ VALIDATION: passed=24 failed=0 unexecuted=0
 The last line is the separate Experiment 001 summary. These counts are local
 validation results, not hosted CI results. See the results document for exact
 commands, full outputs, limits, and unexecuted research questions.
+
+Run the acoustic-network experiment and validate its recorded data:
+
+```sh
+sbcl --script experiments/002/run.lisp
+sbcl --script experiments/002/check-recordings.lisp
+```
+
+The shared `scripts/test.lisp` command now also reports:
+
+```text
+Acoustic-network validation: passed=50 failed=0 unexecuted=0
+```
+
+Experiment 002 reports `passed=564 failed=0 unexecuted=0`. Its 248 driven runs
+produce 558 per-realm response records, plus free-transfer and nested-chain traces.
+Maximum absolute complex-response error was 4.85e-7 against independent analytical
+references (<5e-6 required). The energy-balance and refinement checks passed their
+prespecified tolerances. The full experiment stdout and all seven CSV outputs
+were reproduced byte for byte in a separate local process. No hosted CI is claimed.
+
+Rerunning replaces Experiment 002's measurements; use an alternate directory to
+preserve the recorded files:
+
+```sh
+sbcl --script experiments/002/run.lisp /tmp/sephirion-002-replay/
+```
 
 Example realm network in a loaded REPL:
 

@@ -1,0 +1,20 @@
+SEPHIRION-002 / Experiment 002
+OBSERVATIONS
+pair-reference: 31 frequencies; max complex error=1.317394d-7; max scaled energy residual=2.318583d-8
+pair-off: 31 frequencies; max complex error=6.588440d-8; max scaled energy residual=2.417745d-8
+pair-weak: 31 frequencies; max complex error=5.394735d-8; max scaled energy residual=2.403554d-8
+pair-mismatch: 31 frequencies; max complex error=1.771725d-7; max scaled energy residual=2.269564d-8
+pair-low-damping: 31 frequencies; max complex error=4.847548d-7; max scaled energy residual=2.038978d-8
+pair-high-damping: 31 frequencies; max complex error=2.172844d-8; max scaled energy residual=2.497190d-8
+chain-flat: 31 frequencies; max complex error=1.349198d-7; max scaled energy residual=2.303363d-8
+chain-nested: 31 frequencies; max complex error=1.349198d-7; max scaled energy residual=2.303363d-8
+Free transfer Kc=0.0: max receiver local-energy fraction=0.00000000; first 10% crossing=NOT-REACHED; relative drift=1.777687d-9
+Free transfer Kc=0.1: max receiver local-energy fraction=0.99791990; first 10% crossing=6.44d0; relative drift=2.483575d-9
+Free transfer Kc=0.5: max receiver local-energy fraction=0.96992268; first 10% crossing=2.1d0; relative drift=1.007310d-8
+Flat/nested maximum response/accounting difference=0.000000d+0
+VALIDATION: passed=564 failed=0 unexecuted=0
+
+INTERPRETATION
+The measured responses agree with the specified passive acoustic graph and independent analytical references.
+Containment labels alone add no physical effect in the matched graph control.
+These are normalized lumped acoustic simulations, not evidence of cognition, physical calibration, or unconnected interactions.

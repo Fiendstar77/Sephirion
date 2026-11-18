@@ -1,0 +1,53 @@
+2022 acoustic checks passed.
+Realm validation: passed=101 failed=0 unexecuted=0
+PASS pair transient recovery observed=4.440892098500626d-16 criterion=(< 1.0d-11)
+PASS pair transient recovery observed=7.771561172376096d-16 criterion=(< 1.0d-11)
+PASS pair complex analytical response observed=2.6447253683994027d-9 criterion=(< 5.0d-6)
+PASS chain modal analytical response observed=2.4967227331744404d-9 criterion=(< 5.0d-6)
+PASS pair complex analytical response observed=3.6610663223137255d-8 criterion=(< 5.0d-6)
+PASS chain modal analytical response observed=2.7908008971219594d-8 criterion=(< 5.0d-6)
+PASS pair complex analytical response observed=1.3173944240139504d-7 criterion=(< 5.0d-6)
+PASS chain modal analytical response observed=2.996262829330192d-8 criterion=(< 5.0d-6)
+PASS pair complex analytical response observed=1.1254470780829764d-8 criterion=(< 5.0d-6)
+PASS chain modal analytical response observed=1.6217348744940097d-8 criterion=(< 5.0d-6)
+PASS uncoupled nested isolation observed=((0.0d0 0.0d0) (0.0d0 0.0d0)) criterion=:EXACT-ZERO
+PASS undriven undamped relative energy drift observed=2.518273545248917d-8 criterion=(< 1.0d-7)
+PASS undriven undamped relative energy drift observed=2.7774756716780757d-8 criterion=(< 1.0d-7)
+PASS passive per-step energy increase observed=0.0d0 criterion=(< 1.0d-12)
+PASS passive final energy fraction at t=20 observed=0.01813232504937842d0 criterion=(< 0.03d0)
+PASS driven input-work/dissipation balance observed=1.5568909854730972d-9 criterion=(< 1.0d-6)
+PASS independent energy derivative equals pressure work minus loss observed=9.502121312010559d-13 criterion=(< 1.0d-8)
+PASS fourth-order state refinement observed=16.311357199219795d0 criterion=(> 12.0d0)
+PASS driven balance refinement observed=12.628194262149934d0 criterion=(> 8.0d0)
+PASS least-damped settling-window comparison observed=3.870789332229432d-9 criterion=(< 5.0d-6)
+PASS flat/nested entire physical trajectory observed=0.0d0 criterion=:EXACT-ZERO
+PASS deterministic complete snapshot replay observed=T criterion=T
+PASS predecessor and returned-state isolation observed=T criterion=T
+PASS explicit initial local and shared spring energy observed=(0.625d0 0.125d0) criterion=(0.625d0 0.125d0)
+PASS canonical declaration and endpoint ordering observed=T criterion=T
+PASS constant excitation exact single-oscillator response observed=5.098040913031898d-12 criterion=(< 1.0d-9)
+PASS integration overflow rejected observed=T criterion=:MODEL-ERROR
+PASS failed step is transactional observed=T criterion=T
+PASS nonpositive inertance observed=T criterion=:MODEL-ERROR
+PASS negative inverse compliance observed=T criterion=:MODEL-ERROR
+PASS negative damping observed=T criterion=:MODEL-ERROR
+PASS negative coupling observed=T criterion=:MODEL-ERROR
+PASS complex state observed=T criterion=:MODEL-ERROR
+PASS invalid excitation observed=T criterion=:MODEL-ERROR
+PASS negative drive frequency observed=T criterion=:MODEL-ERROR
+PASS overflow-sized input observed=T criterion=:MODEL-ERROR
+PASS underflow-sized positive coefficient observed=T criterion=:MODEL-ERROR
+PASS zero timestep observed=T criterion=:MODEL-ERROR
+PASS negative step count observed=T criterion=:MODEL-ERROR
+PASS self coupling observed=T criterion=:MODEL-ERROR
+PASS invalid enabled flag observed=T criterion=:MODEL-ERROR
+PASS missing endpoint observed=T criterion=:MODEL-ERROR
+PASS duplicate realm IDs observed=T criterion=:MODEL-ERROR
+PASS duplicate unordered coupling observed=T criterion=:MODEL-ERROR
+PASS missing parent observed=T criterion=:MODEL-ERROR
+PASS containment cycle observed=T criterion=:MODEL-ERROR
+PASS disabled boundary bypass observed=T criterion=:MODEL-ERROR
+PASS directed path is not acoustic coupling observed=T criterion=:MODEL-ERROR
+PASS empty acoustic network observed=T criterion=:MODEL-ERROR
+PASS improper realm list observed=T criterion=:MODEL-ERROR
+Acoustic-network validation: passed=50 failed=0 unexecuted=0

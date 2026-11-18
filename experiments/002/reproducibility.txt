@@ -1,0 +1,4 @@
+PASS Experiment 001 stdout is byte-identical to its preserved record.
+PASS Experiment 002 stdout is byte-identical in a fresh process.
+PASS All seven Experiment 002 CSV files are byte-identical in a fresh process.
+PASS Exact engine/API, old pair engine, original specifications and recorded results are unchanged.
